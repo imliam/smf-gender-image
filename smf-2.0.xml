@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE modification SYSTEM "http://www.simplemachines.org/xml/modification">
+<modification xmlns="http://www.simplemachines.org/xml/modification" xmlns:smf="http://www.simplemachines.org/">
+	<name>Gender Image To Text</name>
+	<id>LiamHammett:GenderImage</id>
+	<version>1.0</version>
+	<homepage>https://liamhammett.com/</homepage>
+
+<file name="$themedir/Display.template.php">
+	<operation>
+		<search position="replace"><![CDATA[&& $message['member']['gender']['image']]]></search>
+		<add><![CDATA[&& $message['member']['gender']['text']]]></add>
+	</operation>
+
+	<operation>
+		<search position="replace"><![CDATA[', $message['member']['gender']['image'], ']]></search>
+		<add><![CDATA[', $message['member']['gender']['name'], ']]></add>
+	</operation>
+</file>
+
+</modification>
